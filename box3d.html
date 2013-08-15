@@ -6,9 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <link href='box3d.css' rel='stylesheet' type='text/css' />
+<script src="underscore.js" type="text/javascript" ></script>
 </head>
 <body>
-<div id="experiment">
+<div id="main">
     <div id="cube">
         <div id="cube_one" class="face">
                 <h2>Face ONE</h2>
@@ -31,8 +32,16 @@
     </div>
 </div>
 <footer>
-	<button onclick="toggleLogin()">Toggle Login</button>
+	<div id='info_bar'>
+		Width : <span id="window_width"></span>
+		Height : <span id="window_height"></span>
+		X : <span id="mouse_pos_x"></span>
+		Y : <span id="mouse_pos_y"></span>
+	 </div>
 </footer> <!--End Footer-->
 </body>
 </html>
+<script src="KAVars.js" type="text/javascript"></script>
 <script src="box3d.js" type="text/javascript"></script>
+<script src="widgetDivs.js" type="text/javascript"></script>
+<script src="track.js" type="text/javascript"></script>

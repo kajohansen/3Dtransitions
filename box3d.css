@@ -1,19 +1,24 @@
 body {
-	padding: 100px 0px 200px 0px;
+	padding: 0px;
+	margin: 0px;
 }
-#experiment {
+#main {
 	perspective: 800;
-	perspective-origin: 50% 200px;
+	perspective-origin: 50% 50%;
   	-webkit-perspective: 800;
-  	-webkit-perspective-origin: 50% 200px;
+  	-webkit-perspective-origin: 50% 50%;
   	-moz-perspective: 800px;
   	-moz-perspective-origin: 50% 50%;
+  	-webkit-user-select: none;  
+	border: 2px dotted fuchsia;
+	margin-top: 100px;
 }
 #cube {
 	position: relative;
 	margin: 0 auto;
 	height: 400px;
 	width: 400px;
+	border: 2px dotted aqua;
 	transition: -webkit-transform 2s linear;
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform 2s linear;
@@ -23,40 +28,46 @@ body {
  }
 .face {
 	position: absolute;
-	height: 360px;
-	width: 360px;
+	height: 360px; /* 360 joins sides */
+	width: 360px; /* 360 joins sides */
 	padding: 20px;
-	background-color: rgba(50, 50, 50, 0.7);
+	color: white;
 }
 #cube_one  {
 	transform: translateZ(200px);
   	-webkit-transform: translateZ(200px);
   	-moz-transform: translateZ(200px);
+	background-color: rgba(0, 50, 50, 0.7);
 }
 #cube_two {
 	transform: rotateX(90deg) translateZ(200px);
     -webkit-transform: rotateX(90deg) translateZ(200px);
   	-moz-transform: rotateX(90deg) translateZ(200px);
+	background-color: rgba(50, 0, 50, 0.7);
 }
 #cube_three {
 	transform: rotateY(90deg) translateZ(200px);
   	-webkit-transform: rotateY(90deg) translateZ(200px);
   	-moz-transform: rotateY(90deg) translateZ(200px);
+	background-color: rgba(50, 50, 0, 0.7);
 }
 #cube_four {
 	transform: rotateY(180deg) translateZ(200px);
   	-webkit-transform: rotateY(180deg) translateZ(200px);
   	-moz-transform: rotateY(180deg) translateZ(200px);
+	background-color: rgba(0, 0, 50, 0.7);
 }
 #cube_five {
 	transform: rotateY(-90deg) translateZ(200px);
   	-webkit-transform: rotateY(-90deg) translateZ(200px);
   	-moz-transform: rotateY(-90deg) translateZ(200px);
+	background-color: rgba(0, 50, 0, 0.7);
 }
 #cube_six {
 	transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
   	-webkit-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
   	-moz-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+	background-color: rgba(50, 0, 0, 0.7);
 }
 
 /* Other rules */
